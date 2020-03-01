@@ -14,10 +14,10 @@ using System;
 
 class LeftRotation
 {
-    static void Main(string[] args)
-    {
-        EntryPoint(args);
-    }
+    // static void Main(string[] args)
+    // {
+    //     EntryPoint(args);
+    // }
 
     static void EntryPoint(string[] args)
     {
