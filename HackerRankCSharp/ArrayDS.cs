@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-class Solution
+class ArrayDS
 {
     // Complete the reverseArray function below.
     static int[] reverseArray(int[] a)
@@ -20,10 +20,10 @@ class Solution
         return a.Reverse().ToArray();
     }
 
-    static void Main(string[] args)
-    {
-        EntryPoint(args);
-    }
+    // static void Main(string[] args)
+    // {
+    //     EntryPoint(args);
+    // }
 
     static void EntryPoint(string[] args)
     {
