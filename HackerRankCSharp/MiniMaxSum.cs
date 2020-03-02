@@ -14,11 +14,11 @@ using System;
 
 class MiniMaxSum
 {
-    static void Main(string[] args)
-    {
-        long[] A = Array.ConvertAll(Console.ReadLine().Split(' '), long.Parse);
-
-        long totalSum = A.Sum();
-        Console.WriteLine(totalSum - A.Max() + " " + (totalSum - A.Min()));
-    }
+    // static void Main(string[] args)
+    // {
+    //     long[] A = Array.ConvertAll(Console.ReadLine().Split(' '), long.Parse);
+    //
+    //     long totalSum = A.Sum();
+    //     Console.WriteLine(totalSum - A.Max() + " " + (totalSum - A.Min()));
+    // }
 }
