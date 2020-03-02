@@ -25,8 +25,8 @@ class TwoDArrayDS
             for (int j = 0; j < arr[0].Length - 2; j++)
             {
                 int mySum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2] + arr[i + 1][j + 1] + arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
-                
-                if (mySum > result) 
+
+                if (mySum > result)
                     result = mySum;
             }
         }
@@ -36,25 +36,18 @@ class TwoDArrayDS
 
     // static void Main(string[] args)
     // {
-    //     EntryPoint(args);
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     int[][] arr = new int[6][];
+    //
+    //     for (int i = 0; i < 6; i++)
+    //         arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+    //
+    //     int result = hourglassSum(arr);
+    //
+    //     textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
     // }
-
-    static void EntryPoint(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int[][] arr = new int[6][];
-
-        for (int i = 0; i < 6; i++)
-        {
-            arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-        }
-
-        int result = hourglassSum(arr);
-
-        textWriter.WriteLine(result);
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
 }

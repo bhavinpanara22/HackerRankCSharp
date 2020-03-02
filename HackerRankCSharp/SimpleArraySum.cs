@@ -11,8 +11,8 @@ class SimpleArraySum
     //
     //     int arCount = Convert.ToInt32(Console.ReadLine());
     //
-    //     int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp))
-    //         ;
+    //     int[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt32(arTemp));
+    //
     //     int result = ar.Sum();
     //
     //     textWriter.WriteLine(result);

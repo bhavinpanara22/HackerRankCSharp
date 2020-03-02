@@ -14,19 +14,19 @@ using System;
 
 class AVeryBigSum
 {
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int arCount = Convert.ToInt32(Console.ReadLine());
-
-        long[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp));
-
-        long result = ar.Sum();
-
-        textWriter.WriteLine(result);
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     int arCount = Convert.ToInt32(Console.ReadLine());
+    //
+    //     long[] ar = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => Convert.ToInt64(arTemp));
+    //
+    //     long result = ar.Sum();
+    //
+    //     textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
