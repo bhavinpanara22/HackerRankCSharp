@@ -14,20 +14,20 @@ using System;
 
 class StairCase
 {
-    static void Main(string[] args)
-    {
-        int n = Convert.ToInt32(Console.ReadLine());
-
-        for (int i = 1; i <= n; i++)
-        {
-            string toWrite = string.Empty;
-            for (int j = 0; j < n - i; j++)
-                toWrite += " ";
-
-            for (int j = 0; j < i; j++)
-                toWrite += "#";
-
-            Console.WriteLine(toWrite);
-        }
-    }
+    // static void Main(string[] args)
+    // {
+    //     int n = Convert.ToInt32(Console.ReadLine());
+    //
+    //     for (int i = 1; i <= n; i++)
+    //     {
+    //         string toWrite = string.Empty;
+    //         for (int j = 0; j < n - i; j++)
+    //             toWrite += " ";
+    //
+    //         for (int j = 0; j < i; j++)
+    //             toWrite += "#";
+    //
+    //         Console.WriteLine(toWrite);
+    //     }
+    // }
 }
