@@ -39,17 +39,17 @@ class BreakingTheRecords
         return recordBreaks;
     }
 
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int n = Convert.ToInt32(Console.ReadLine());
-
-        int[] scores = Array.ConvertAll(Console.ReadLine().Split(' '), scoresTemp => Convert.ToInt32(scoresTemp));
-        int[] result = BreakingRecords(scores);
-
-        textWriter.WriteLine(string.Join(" ", result));
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     int n = Convert.ToInt32(Console.ReadLine());
+    //
+    //     int[] scores = Array.ConvertAll(Console.ReadLine().Split(' '), scoresTemp => Convert.ToInt32(scoresTemp));
+    //     int[] result = BreakingRecords(scores);
+    //
+    //     textWriter.WriteLine(string.Join(" ", result));
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
