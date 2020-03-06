@@ -42,19 +42,19 @@ class ResultPN
 
 class PickingNumbers
 {
-    public static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int n = Convert.ToInt32(Console.ReadLine().Trim());
-
-        List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
-
-        int result = ResultPN.pickingNumbers(a);
-
-        textWriter.WriteLine(result);
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // public static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     int n = Convert.ToInt32(Console.ReadLine().Trim());
+    //
+    //     List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
+    //
+    //     int result = ResultPN.pickingNumbers(a);
+    //
+    //     textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
