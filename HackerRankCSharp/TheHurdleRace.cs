@@ -21,21 +21,21 @@ class TheHurdleRace
         return maxHurdleHeight <= k ? 0 : maxHurdleHeight - k;
     }
 
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-    
-        string[] nk = Console.ReadLine().Split(' ');
-    
-        int n = Convert.ToInt32(nk[0]);
-        int k = Convert.ToInt32(nk[1]);
-    
-        int[] height = Array.ConvertAll(Console.ReadLine().Split(' '), heightTemp => Convert.ToInt32(heightTemp));
-        int   result = HurdleRace(k, height);
-    
-        textWriter.WriteLine(result);
-    
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     string[] nk = Console.ReadLine().Split(' ');
+    //
+    //     int n = Convert.ToInt32(nk[0]);
+    //     int k = Convert.ToInt32(nk[1]);
+    //
+    //     int[] height = Array.ConvertAll(Console.ReadLine().Split(' '), heightTemp => Convert.ToInt32(heightTemp));
+    //     int   result = HurdleRace(k, height);
+    //
+    //     textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
