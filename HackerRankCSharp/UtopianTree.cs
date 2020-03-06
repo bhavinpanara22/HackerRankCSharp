@@ -14,29 +14,29 @@ using System;
 
 class UtopianTree
 {
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int t = Convert.ToInt32(Console.ReadLine());
-
-        for (int tItr = 0; tItr < t; tItr++)
-        {
-            int n      = Convert.ToInt32(Console.ReadLine());
-            int result = 1;
-
-            for (int i = 1; i <= n; i++)
-            {
-                if (i % 2 == 1)
-                    result *= 2;
-                else
-                    result++;
-            }
-
-            textWriter.WriteLine(result);
-        }
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     int t = Convert.ToInt32(Console.ReadLine());
+    //
+    //     for (int tItr = 0; tItr < t; tItr++)
+    //     {
+    //         int n      = Convert.ToInt32(Console.ReadLine());
+    //         int result = 1;
+    //
+    //         for (int i = 1; i <= n; i++)
+    //         {
+    //             if (i % 2 == 1)
+    //                 result *= 2;
+    //             else
+    //                 result++;
+    //         }
+    //
+    //         textWriter.WriteLine(result);
+    //     }
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
