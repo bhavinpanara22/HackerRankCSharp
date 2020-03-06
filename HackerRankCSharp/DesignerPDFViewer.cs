@@ -28,18 +28,18 @@ class DesignerPDFViewer
         return width * maxHeight;
     }
 
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int[]  h    = Array.ConvertAll(Console.ReadLine().Split(' '), hTemp => Convert.ToInt32(hTemp));
-        string word = Console.ReadLine();
-
-        int result = DesignerPdfViewer(h, word);
-
-        textWriter.WriteLine(result);
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     int[]  h    = Array.ConvertAll(Console.ReadLine().Split(' '), hTemp => Convert.ToInt32(hTemp));
+    //     string word = Console.ReadLine();
+    //
+    //     int result = DesignerPdfViewer(h, word);
+    //
+    //     textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
