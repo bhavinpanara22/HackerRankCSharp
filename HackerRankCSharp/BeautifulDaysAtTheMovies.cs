@@ -39,21 +39,21 @@ class BeautifulDaysAtTheMovies
         return result;
     }
 
-    static void Main(string[] args)
-    {
-        // TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        string[] ijk = Console.ReadLine().Split(' ');
-
-        int i = Convert.ToInt32(ijk[0]);
-        int j = Convert.ToInt32(ijk[1]);
-        int k = Convert.ToInt32(ijk[2]);
-
-        int result = BeautifulDays(i, j, k);
-
-        Console.WriteLine(result);
-
-        // textWriter.Flush();
-        // textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     string[] ijk = Console.ReadLine().Split(' ');
+    //
+    //     int i = Convert.ToInt32(ijk[0]);
+    //     int j = Convert.ToInt32(ijk[1]);
+    //     int k = Convert.ToInt32(ijk[2]);
+    //
+    //     int result = BeautifulDays(i, j, k);
+    //
+    //     textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
