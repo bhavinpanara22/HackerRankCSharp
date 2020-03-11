@@ -33,19 +33,19 @@ class AppendAndDelete
         return "No";
     }
 
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        string s = Console.ReadLine();
-        string t = Console.ReadLine();
-        int    k = Convert.ToInt32(Console.ReadLine());
-
-        string result = AppendAndDeleteMethod(s, t, k);
-
-        textWriter.WriteLine(result);
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     string s = Console.ReadLine();
+    //     string t = Console.ReadLine();
+    //     int    k = Convert.ToInt32(Console.ReadLine());
+    //
+    //     string result = AppendAndDeleteMethod(s, t, k);
+    //
+    //     textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
