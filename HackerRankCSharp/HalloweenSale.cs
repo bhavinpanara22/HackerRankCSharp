@@ -30,22 +30,22 @@ class HalloweenSale
         return games;
     }
 
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        string[] pdms = Console.ReadLine().Split(' ');
-
-        int p = Convert.ToInt32(pdms[0]);
-        int d = Convert.ToInt32(pdms[1]);
-        int m = Convert.ToInt32(pdms[2]);
-        int s = Convert.ToInt32(pdms[3]);
-
-        int answer = HowManyGames(p, d, m, s);
-
-        textWriter.WriteLine(answer);
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     string[] pdms = Console.ReadLine().Split(' ');
+    //
+    //     int p = Convert.ToInt32(pdms[0]);
+    //     int d = Convert.ToInt32(pdms[1]);
+    //     int m = Convert.ToInt32(pdms[2]);
+    //     int s = Convert.ToInt32(pdms[3]);
+    //
+    //     int answer = HowManyGames(p, d, m, s);
+    //
+    //     textWriter.WriteLine(answer);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
