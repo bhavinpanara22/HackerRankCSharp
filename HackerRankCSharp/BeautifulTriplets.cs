@@ -20,21 +20,21 @@ class BeautifulTriplets
         return arr.Count(temp => arr.Contains(temp + d) && arr.Contains(temp + (2 * d)));
     }
 
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        string[] nd = Console.ReadLine().Split(' ');
-
-        int   n   = Convert.ToInt32(nd[0]);
-        int   d   = Convert.ToInt32(nd[1]);
-        int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-
-        int result = BeautifulTripletsMethod(d, arr);
-
-        textWriter.WriteLine(result);
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     string[] nd = Console.ReadLine().Split(' ');
+    //
+    //     int   n   = Convert.ToInt32(nd[0]);
+    //     int   d   = Convert.ToInt32(nd[1]);
+    //     int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+    //
+    //     int result = BeautifulTripletsMethod(d, arr);
+    //
+    //     textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
