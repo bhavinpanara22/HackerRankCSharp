@@ -46,11 +46,11 @@ class ModifiedKaprekarNumbers
         return (numL + numR) == num;
     }
 
-    static void Main(string[] args)
-    {
-        int p = Convert.ToInt32(Console.ReadLine());
-        int q = Convert.ToInt32(Console.ReadLine());
-
-        KaprekarNumbers(p, q);
-    }
+    // static void Main(string[] args)
+    // {
+    //     int p = Convert.ToInt32(Console.ReadLine());
+    //     int q = Convert.ToInt32(Console.ReadLine());
+    //
+    //     KaprekarNumbers(p, q);
+    // }
 }
