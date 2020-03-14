@@ -27,16 +27,16 @@ class StrangeCounter
 		return rem - t + 1;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		long t      = Convert.ToInt64(Console.ReadLine());
-		long result = StrangeCounterMethod(t);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	long t      = Convert.ToInt64(Console.ReadLine());
+	// 	long result = StrangeCounterMethod(t);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
