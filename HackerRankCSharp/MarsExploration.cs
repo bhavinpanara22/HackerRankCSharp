@@ -32,16 +32,16 @@ class Solution
 		return result;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string s = Console.ReadLine();
-
-		int result = MarsExplorationMethod(s);
-
-		textWriter.WriteLine(result);
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string s = Console.ReadLine();
+	//
+	// 	int result = MarsExplorationMethod(s);
+	//
+	// 	textWriter.WriteLine(result);
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
