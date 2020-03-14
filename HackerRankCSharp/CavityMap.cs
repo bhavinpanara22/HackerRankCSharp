@@ -41,24 +41,24 @@ class CavityMap
 		return result;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int      n    = Convert.ToInt32(Console.ReadLine());
-		string[] grid = new string [n];
-
-		for (int i = 0; i < n; i++)
-		{
-			string gridItem = Console.ReadLine();
-			grid[i] = gridItem;
-		}
-
-		string[] result = CavityMapMethod(grid);
-
-		textWriter.WriteLine(string.Join("\n", result));
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int      n    = Convert.ToInt32(Console.ReadLine());
+	// 	string[] grid = new string [n];
+	//
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		string gridItem = Console.ReadLine();
+	// 		grid[i] = gridItem;
+	// 	}
+	//
+	// 	string[] result = CavityMapMethod(grid);
+	//
+	// 	textWriter.WriteLine(string.Join("\n", result));
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
