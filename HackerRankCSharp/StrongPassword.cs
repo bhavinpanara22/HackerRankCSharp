@@ -35,18 +35,18 @@ class StrongPassword
 		return Math.Max(6 - n, result);
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int    n        = Convert.ToInt32(Console.ReadLine());
-		string password = Console.ReadLine();
-
-		int answer = MinimumNumber(n, password);
-
-		textWriter.WriteLine(answer);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int    n        = Convert.ToInt32(Console.ReadLine());
+	// 	string password = Console.ReadLine();
+	//
+	// 	int answer = MinimumNumber(n, password);
+	//
+	// 	textWriter.WriteLine(answer);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
