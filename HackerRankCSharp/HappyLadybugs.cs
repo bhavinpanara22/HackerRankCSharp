@@ -47,23 +47,23 @@ class HappyLadybugs
 		return myDictionary.Any(temp => temp.Value == 1) ? "NO" : "YES";
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int g = Convert.ToInt32(Console.ReadLine());
-
-		for (int gItr = 0; gItr < g; gItr++)
-		{
-			int    n = Convert.ToInt32(Console.ReadLine());
-			string b = Console.ReadLine();
-
-			string result = HappyLadybugsMethod(b);
-
-			textWriter.WriteLine(result);
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int g = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	for (int gItr = 0; gItr < g; gItr++)
+	// 	{
+	// 		int    n = Convert.ToInt32(Console.ReadLine());
+	// 		string b = Console.ReadLine();
+	//
+	// 		string result = HappyLadybugsMethod(b);
+	//
+	// 		textWriter.WriteLine(result);
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
