@@ -34,21 +34,21 @@ class FairRations
         return count;
     }
 
-    static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int   N = Convert.ToInt32(Console.ReadLine());
-        int[] B = Array.ConvertAll(Console.ReadLine().Split(' '), BTemp => Convert.ToInt32(BTemp));
-
-        int result = FairRationsMethod(B);
-
-        if (result == -1)
-            textWriter.WriteLine("NO");
-        else
-            textWriter.WriteLine(result);
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args)
+    // {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     int   N = Convert.ToInt32(Console.ReadLine());
+    //     int[] B = Array.ConvertAll(Console.ReadLine().Split(' '), BTemp => Convert.ToInt32(BTemp));
+    //
+    //     int result = FairRationsMethod(B);
+    //
+    //     if (result == -1)
+    //         textWriter.WriteLine("NO");
+    //     else
+    //         textWriter.WriteLine(result);
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
