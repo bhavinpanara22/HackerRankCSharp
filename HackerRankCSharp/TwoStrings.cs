@@ -21,23 +21,23 @@ class TwoStrings
 		return letters.Any(ch => s1.Contains(ch) && s2.Contains(ch)) ? "YES" : "NO";
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int q = Convert.ToInt32(Console.ReadLine());
-
-		for (int qItr = 0; qItr < q; qItr++)
-		{
-			string s1 = Console.ReadLine();
-			string s2 = Console.ReadLine();
-
-			string result = TwoStringsMethod(s1, s2);
-
-			textWriter.WriteLine(result);
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int q = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	for (int qItr = 0; qItr < q; qItr++)
+	// 	{
+	// 		string s1 = Console.ReadLine();
+	// 		string s2 = Console.ReadLine();
+	//
+	// 		string result = TwoStringsMethod(s1, s2);
+	//
+	// 		textWriter.WriteLine(result);
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
