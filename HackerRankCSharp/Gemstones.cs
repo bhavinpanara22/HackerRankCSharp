@@ -36,25 +36,25 @@ class Gemstones
 		return gemstones;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int n = Convert.ToInt32(Console.ReadLine());
-
-		string[] arr = new string [n];
-
-		for (int i = 0; i < n; i++)
-		{
-			string arrItem = Console.ReadLine();
-			arr[i] = arrItem;
-		}
-
-		int result = GemstonesMethod(arr);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	string[] arr = new string [n];
+	//
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		string arrItem = Console.ReadLine();
+	// 		arr[i] = arrItem;
+	// 	}
+	//
+	// 	int result = GemstonesMethod(arr);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
