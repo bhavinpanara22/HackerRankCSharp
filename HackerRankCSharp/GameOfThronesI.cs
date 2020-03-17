@@ -36,17 +36,17 @@ class GameOfThronesI
 		return oddChars > 1 ? "NO" : "YES";
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string s = Console.ReadLine();
-
-		string result = GameOfThrones(s);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string s = Console.ReadLine();
+	//
+	// 	string result = GameOfThrones(s);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
