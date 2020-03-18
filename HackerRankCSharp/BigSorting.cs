@@ -21,25 +21,25 @@ class BigSorting
 		return unsorted;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int n = Convert.ToInt32(Console.ReadLine());
-
-		string[] unsorted = new string [n];
-
-		for (int i = 0; i < n; i++)
-		{
-			string unsortedItem = Console.ReadLine();
-			unsorted[i] = unsortedItem;
-		}
-
-		string[] result = BigSortingMethod(unsorted);
-
-		textWriter.WriteLine(string.Join("\n", result));
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	string[] unsorted = new string [n];
+	//
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		string unsortedItem = Console.ReadLine();
+	// 		unsorted[i] = unsortedItem;
+	// 	}
+	//
+	// 	string[] result = BigSortingMethod(unsorted);
+	//
+	// 	textWriter.WriteLine(string.Join("\n", result));
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
