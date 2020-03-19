@@ -25,10 +25,10 @@ class CorrectnessAndTheLoopInvariant
 		Console.WriteLine(string.Join(" ", A));
 	}
 
-	static void Main(string[] args)
-	{
-		Console.ReadLine();
-		int[] _ar = (from s in Console.ReadLine().Split() select Convert.ToInt32(s)).ToArray();
-		insertionSort(_ar);
-	}
+	// static void Main(string[] args)
+	// {
+	// 	Console.ReadLine();
+	// 	int[] _ar = (from s in Console.ReadLine().Split() select Convert.ToInt32(s)).ToArray();
+	// 	insertionSort(_ar);
+	// }
 }
