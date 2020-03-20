@@ -36,21 +36,21 @@ class MissingNumbers
 		      .ToArray();
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int n = Convert.ToInt32(Console.ReadLine());
-
-		int[] dataWithoutMissingItems = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-		int   m                       = Convert.ToInt32(Console.ReadLine());
-
-		int[] originalData = Array.ConvertAll(Console.ReadLine().Split(' '), brrTemp => Convert.ToInt32(brrTemp));
-		int[] result       = MissingNumbersMethod(dataWithoutMissingItems, originalData);
-
-		textWriter.WriteLine(string.Join(" ", result));
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	int[] dataWithoutMissingItems = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+	// 	int   m                       = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	int[] originalData = Array.ConvertAll(Console.ReadLine().Split(' '), brrTemp => Convert.ToInt32(brrTemp));
+	// 	int[] result       = MissingNumbersMethod(dataWithoutMissingItems, originalData);
+	//
+	// 	textWriter.WriteLine(string.Join(" ", result));
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
