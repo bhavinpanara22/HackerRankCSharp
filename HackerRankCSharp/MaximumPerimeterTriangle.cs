@@ -34,21 +34,18 @@ class MaximumPerimeterTriangle
 		return result;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int n = Convert.ToInt32(Console.ReadLine());
-
-		int[] sticks = Array.ConvertAll(Console.ReadLine().Split(' '), sticksTemp => Convert.ToInt32(sticksTemp));
-		int[] result = MaximumPerimeterTriangleMethod(sticks);
-
-		if (result[0] != -1)
-			textWriter.WriteLine(string.Join(" ", result));
-		else
-			textWriter.WriteLine("-1");
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	int[] sticks = Array.ConvertAll(Console.ReadLine().Split(' '), sticksTemp => Convert.ToInt32(sticksTemp));
+	// 	int[] result = MaximumPerimeterTriangleMethod(sticks);
+	//
+	// 	textWriter.WriteLine(result[0] != -1 ? string.Join(" ", result) : "-1");
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
