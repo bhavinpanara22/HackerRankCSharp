@@ -53,24 +53,24 @@ class IceCreamParlor
 		return index;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int t = Convert.ToInt32(Console.ReadLine());
-
-		for (int tItr = 0; tItr < t; tItr++)
-		{
-			int m = Convert.ToInt32(Console.ReadLine());
-			int n = Convert.ToInt32(Console.ReadLine());
-
-			int[] arr    = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-			int[] result = IceCreamParlorMethod(m, arr);
-
-			textWriter.WriteLine(string.Join(" ", result));
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int t = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	for (int tItr = 0; tItr < t; tItr++)
+	// 	{
+	// 		int m = Convert.ToInt32(Console.ReadLine());
+	// 		int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 		int[] arr    = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
+	// 		int[] result = IceCreamParlorMethod(m, arr);
+	//
+	// 		textWriter.WriteLine(string.Join(" ", result));
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
