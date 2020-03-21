@@ -31,24 +31,24 @@ class SherlockAndArray
 		return "NO";
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int T = Convert.ToInt32(Console.ReadLine().Trim());
-
-		for (int TItr = 0; TItr < T; TItr++)
-		{
-			int n = Convert.ToInt32(Console.ReadLine().Trim());
-
-			List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
-
-			string result = BalancedSums(arr);
-
-			textWriter.WriteLine(result);
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int T = Convert.ToInt32(Console.ReadLine().Trim());
+	//
+	// 	for (int TItr = 0; TItr < T; TItr++)
+	// 	{
+	// 		int n = Convert.ToInt32(Console.ReadLine().Trim());
+	//
+	// 		List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+	//
+	// 		string result = BalancedSums(arr);
+	//
+	// 		textWriter.WriteLine(result);
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
