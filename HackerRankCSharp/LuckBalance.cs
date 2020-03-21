@@ -29,27 +29,27 @@ class LuckBalance
 		return totalLuck;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string[] nk = Console.ReadLine().Split(' ');
-
-		int n = Convert.ToInt32(nk[0]);
-		int k = Convert.ToInt32(nk[1]);
-
-		int[][] contests = new int[n][];
-
-		for (int i = 0; i < n; i++)
-		{
-			contests[i] = Array.ConvertAll(Console.ReadLine().Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
-		}
-
-		int result = LuckBalanceMethod(k, contests);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string[] nk = Console.ReadLine().Split(' ');
+	//
+	// 	int n = Convert.ToInt32(nk[0]);
+	// 	int k = Convert.ToInt32(nk[1]);
+	//
+	// 	int[][] contests = new int[n][];
+	//
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		contests[i] = Array.ConvertAll(Console.ReadLine().Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
+	// 	}
+	//
+	// 	int result = LuckBalanceMethod(k, contests);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
