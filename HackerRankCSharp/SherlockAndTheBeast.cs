@@ -24,14 +24,14 @@ class SherlockAndTheBeast
 			Console.WriteLine(new string('5', n - c) + new string('3', c));
 	}
 
-	static void Main(string[] args)
-	{
-		int t = Convert.ToInt32(Console.ReadLine().Trim());
-
-		for (int tItr = 0; tItr < t; tItr++)
-		{
-			int n = Convert.ToInt32(Console.ReadLine().Trim());
-			DecentNumber(n);
-		}
-	}
+	// static void Main(string[] args)
+	// {
+	// 	int t = Convert.ToInt32(Console.ReadLine().Trim());
+	//
+	// 	for (int tItr = 0; tItr < t; tItr++)
+	// 	{
+	// 		int n = Convert.ToInt32(Console.ReadLine().Trim());
+	// 		DecentNumber(n);
+	// 	}
+	// }
 }
