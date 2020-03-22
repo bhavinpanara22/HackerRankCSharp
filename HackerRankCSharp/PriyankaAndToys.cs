@@ -17,20 +17,22 @@ class PriyankaAndToys
 	// Complete the toys function below.
 	static int Toys(int[] w)
 	{
-		Array.Sort(w);
+		int result = 0;
+		int[] counts = new int[10000];
 
-		int count = 0;
-		for (int i = 0; i < w.Length;)
+		foreach (var temp in w)
+			counts[temp]++;
+
+		for (int i = 0; i < 10000; i++)
 		{
-			int compareTo = w[i];
-			count++;
-
-			i++;
-			while (i < w.Length && w[i] <= compareTo + 4)
-				i++;
+			if (counts[i] != 0)
+			{
+				result++;
+				i += 4;
+			}
 		}
 
-		return count;
+		return result;
 	}
 
 	static void Main(string[] args)
