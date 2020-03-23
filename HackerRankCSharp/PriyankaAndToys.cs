@@ -35,17 +35,17 @@ class PriyankaAndToys
 		return result;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int   n      = Convert.ToInt32(Console.ReadLine());
-		int[] w      = Array.ConvertAll(Console.ReadLine().Split(' '), wTemp => Convert.ToInt32(wTemp));
-		int   result = Toys(w);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int   n      = Convert.ToInt32(Console.ReadLine());
+	// 	int[] w      = Array.ConvertAll(Console.ReadLine().Split(' '), wTemp => Convert.ToInt32(wTemp));
+	// 	int   result = Toys(w);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
