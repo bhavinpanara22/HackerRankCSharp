@@ -20,22 +20,22 @@ class GameOfStones
 		return n % 7 < 2 ? "Second" : "First";
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int t = Convert.ToInt32(Console.ReadLine());
-
-		for (int tItr = 0; tItr < t; tItr++)
-		{
-			int n = Convert.ToInt32(Console.ReadLine());
-
-			string result = GameOfStonesMethod(n);
-
-			textWriter.WriteLine(result);
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int t = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	for (int tItr = 0; tItr < t; tItr++)
+	// 	{
+	// 		int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 		string result = GameOfStonesMethod(n);
+	//
+	// 		textWriter.WriteLine(result);
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
