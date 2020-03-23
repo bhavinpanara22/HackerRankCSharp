@@ -29,17 +29,17 @@ class SumVsXor
 		return result;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		long n = Convert.ToInt64(Console.ReadLine().Trim());
-
-		long result = SumXor(n);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	long n = Convert.ToInt64(Console.ReadLine().Trim());
+	//
+	// 	long result = SumXor(n);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
