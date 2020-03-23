@@ -14,7 +14,6 @@ using System;
 
 class PokerNim
 {
-	// Complete the pokerNim function below.
 	static string PokerNimMethod(int k, int[] c)
 	{
 		int xor = 0;
