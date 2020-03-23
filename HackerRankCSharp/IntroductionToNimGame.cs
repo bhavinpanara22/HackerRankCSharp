@@ -24,22 +24,22 @@ class IntroductionToNimGame {
         return xor == 0 ? "Second": "First";
     }
 
-    static void Main(string[] args) {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int g = Convert.ToInt32(Console.ReadLine());
-
-        for (int gItr = 0; gItr < g; gItr++) {
-            int n = Convert.ToInt32(Console.ReadLine());
-
-            int[] pile = Array.ConvertAll(Console.ReadLine().Split(' '), pileTemp => Convert.ToInt32(pileTemp))            ;
-            string result = NimGame(pile);
-
-            textWriter.WriteLine(result);
-        }
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    // static void Main(string[] args) {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    //
+    //     int g = Convert.ToInt32(Console.ReadLine());
+    //
+    //     for (int gItr = 0; gItr < g; gItr++) {
+    //         int n = Convert.ToInt32(Console.ReadLine());
+    //
+    //         int[] pile = Array.ConvertAll(Console.ReadLine().Split(' '), pileTemp => Convert.ToInt32(pileTemp))            ;
+    //         string result = NimGame(pile);
+    //
+    //         textWriter.WriteLine(result);
+    //     }
+    //
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
 
