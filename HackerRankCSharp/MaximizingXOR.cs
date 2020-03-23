@@ -28,17 +28,17 @@ class MaximizingXOR
 		return result;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int l      = Convert.ToInt32(Console.ReadLine());
-		int r      = Convert.ToInt32(Console.ReadLine());
-		int result = MaximizingXORMethod(l, r);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int l      = Convert.ToInt32(Console.ReadLine());
+	// 	int r      = Convert.ToInt32(Console.ReadLine());
+	// 	int result = MaximizingXORMethod(l, r);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
