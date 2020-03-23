@@ -37,21 +37,21 @@ class MarkAndToys
 		return count;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string[] nk = Console.ReadLine().Split(' ');
-
-		int n = Convert.ToInt32(nk[0]);
-		int k = Convert.ToInt32(nk[1]);
-
-		int[] prices = Array.ConvertAll(Console.ReadLine().Split(' '), pricesTemp => Convert.ToInt32(pricesTemp));
-		int   result = MaximumToys(prices, k);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string[] nk = Console.ReadLine().Split(' ');
+	//
+	// 	int n = Convert.ToInt32(nk[0]);
+	// 	int k = Convert.ToInt32(nk[1]);
+	//
+	// 	int[] prices = Array.ConvertAll(Console.ReadLine().Split(' '), pricesTemp => Convert.ToInt32(pricesTemp));
+	// 	int   result = MaximumToys(prices, k);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
