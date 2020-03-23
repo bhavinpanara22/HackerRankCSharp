@@ -24,24 +24,24 @@ class JimAndTheOrders
 		return result.OrderBy(x => x.Value).ThenBy(x => x.Key).Select(x => x.Key).ToArray();
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int n = Convert.ToInt32(Console.ReadLine());
-
-		int[][] orders = new int[n][];
-
-		for (int i = 0; i < n; i++)
-		{
-			orders[i] = Array.ConvertAll(Console.ReadLine().Split(' '), ordersTemp => Convert.ToInt32(ordersTemp));
-		}
-
-		int[] result = JimOrders(orders);
-
-		textWriter.WriteLine(string.Join(" ", result));
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	int[][] orders = new int[n][];
+	//
+	// 	for (int i = 0; i < n; i++)
+	// 	{
+	// 		orders[i] = Array.ConvertAll(Console.ReadLine().Split(' '), ordersTemp => Convert.ToInt32(ordersTemp));
+	// 	}
+	//
+	// 	int[] result = JimOrders(orders);
+	//
+	// 	textWriter.WriteLine(string.Join(" ", result));
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
