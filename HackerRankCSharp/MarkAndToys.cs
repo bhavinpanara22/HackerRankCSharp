@@ -23,7 +23,7 @@ class MarkAndToys
 
 		foreach (var toy in prices)
 		{
-			if (k - toy >= 0)
+			if (toy <= k)
 			{
 				k -= toy;
 				count++;
