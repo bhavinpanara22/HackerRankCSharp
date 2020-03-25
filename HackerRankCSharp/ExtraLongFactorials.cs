@@ -29,9 +29,9 @@ class ExtraLongFactorials
 		return n * BigFactorial(n - 1);
 	}
 
-	static void Main(string[] args)
-	{
-		int n = Convert.ToInt32(Console.ReadLine());
-		ExtraLongFactorialsMethod(n);
-	}
+	// static void Main(string[] args)
+	// {
+	// 	int n = Convert.ToInt32(Console.ReadLine());
+	// 	ExtraLongFactorialsMethod(n);
+	// }
 }
