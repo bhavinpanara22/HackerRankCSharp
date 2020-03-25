@@ -84,18 +84,18 @@ class TheTimeInWords
 		return time;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int h = Convert.ToInt32(Console.ReadLine());
-		int m = Convert.ToInt32(Console.ReadLine());
-
-		string result = TimeInWords(h, m);
-
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int h = Convert.ToInt32(Console.ReadLine());
+	// 	int m = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	string result = TimeInWords(h, m);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
