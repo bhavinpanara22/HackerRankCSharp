@@ -49,7 +49,8 @@ class TheTimeInWords
 			"twenty six",
 			"twenty seven",
 			"twenty eight",
-			"twenty nine"
+			"twenty nine",
+			"half"
 		};
 
 		string unit      = m == 1 || m == 59 ? "minute" : "minutes";
@@ -62,13 +63,13 @@ class TheTimeInWords
 				time = words[h] + " o' clock";
 				break;
 			case 15:
-				time = "quarter past " + words[h];
+				time = words[m] + " past " + words[h];
 				break;
 			case 30:
-				time = "half past " + words[h];
+				time = words[m] + " past " + words[h];
 				break;
 			case 45:
-				time = "quarter to " + aheadHour;
+				time = words[60 - m] + " to " + aheadHour;
 				break;
 			default:
 			{
