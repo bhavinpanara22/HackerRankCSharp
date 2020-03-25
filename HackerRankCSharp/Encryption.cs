@@ -19,10 +19,7 @@ class Encryption
 	static string EncryptionMethod(string s)
 	{
 		s = s.Replace(" ", "");
-		int n = s.Length;
-
-		int rows    = (int) Math.Floor(Math.Sqrt(n));
-		int columns = (int) Math.Ceiling(Math.Sqrt(n));
+		int columns = (int) Math.Ceiling(Math.Sqrt(s.Length));
 
 		StringBuilder result = new StringBuilder(string.Empty);
 		for (int i = 0; i < columns; i++)
@@ -37,16 +34,16 @@ class Encryption
 		return result.ToString();
 	}
 
-	static void Main(string[] args)
-	{
-		// TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string s      = Console.ReadLine();
-		string result = EncryptionMethod(s);
-
-		Console.WriteLine(result);
-
-		// textWriter.Flush();
-		// textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string s      = Console.ReadLine();
+	// 	string result = EncryptionMethod(s);
+	//
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
