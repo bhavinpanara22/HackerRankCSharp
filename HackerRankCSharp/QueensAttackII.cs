@@ -27,11 +27,9 @@ class QueensAttackII
 		int bottom      = int.MaxValue;
 		int bottomRight = int.MaxValue;
 
-		var useful = obstacles.Where(temp => temp[0] == r
-		                                  || temp[1] == c
-		                                  || Math.Abs(temp[0] - r) == Math.Abs(temp[1] - c));
-
-		foreach (var obstacle in useful)
+		foreach (var obstacle in obstacles.Where(temp => temp[0] == r
+		                                              || temp[1] == c
+		                                              || Math.Abs(temp[0] - r) == Math.Abs(temp[1] - c)))
 		{
 			// right & left
 			if (obstacle[0] == r)
