@@ -46,25 +46,25 @@ class BiggerIsGreater
 			i++;
 			j--;
 		}
-
+		
 		return new string(array);
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int T = Convert.ToInt32(Console.ReadLine());
-
-		for (int TItr = 0; TItr < T; TItr++)
-		{
-			string w      = Console.ReadLine();
-			string result = BiggerIsGreaterMethod(w);
-
-			textWriter.WriteLine(result);
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int T = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	for (int TItr = 0; TItr < T; TItr++)
+	// 	{
+	// 		string w      = Console.ReadLine();
+	// 		string result = BiggerIsGreaterMethod(w);
+	//
+	// 		textWriter.WriteLine(result);
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
