@@ -35,24 +35,24 @@ class OrganizingContainersOfBalls
 		return rowSum.SequenceEqual(columnSum) ? "Possible" : "Impossible";
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int q = Convert.ToInt32(Console.ReadLine());
-		for (int qItr = 0; qItr < q; qItr++)
-		{
-			int n = Convert.ToInt32(Console.ReadLine());
-
-			int[][] container = new int[n][];
-			for (int i = 0; i < n; i++)
-				container[i] = Array.ConvertAll(Console.ReadLine().Split(' '), containerTemp => Convert.ToInt32(containerTemp));
-
-			string result = OrganizingContainers(container);
-			textWriter.WriteLine(result);
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int q = Convert.ToInt32(Console.ReadLine());
+	// 	for (int qItr = 0; qItr < q; qItr++)
+	// 	{
+	// 		int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 		int[][] container = new int[n][];
+	// 		for (int i = 0; i < n; i++)
+	// 			container[i] = Array.ConvertAll(Console.ReadLine().Split(' '), containerTemp => Convert.ToInt32(containerTemp));
+	//
+	// 		string result = OrganizingContainers(container);
+	// 		textWriter.WriteLine(result);
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
