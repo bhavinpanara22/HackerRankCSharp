@@ -47,23 +47,23 @@ class ThreeDSurfaceArea
 		return area;
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string[] hw = Console.ReadLine().Split(' ');
-
-		int     h = Convert.ToInt32(hw[0]);
-		int     w = Convert.ToInt32(hw[1]);
-		int[][] a = new int[h][];
-
-		for (int i = 0; i < h; i++)
-			a[i] = Array.ConvertAll(Console.ReadLine().Split(' '), ATemp => Convert.ToInt32(ATemp));
-
-		int result = SurfaceArea(a);
-		textWriter.WriteLine(result);
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string[] hw = Console.ReadLine().Split(' ');
+	//
+	// 	int     h = Convert.ToInt32(hw[0]);
+	// 	int     w = Convert.ToInt32(hw[1]);
+	// 	int[][] a = new int[h][];
+	//
+	// 	for (int i = 0; i < h; i++)
+	// 		a[i] = Array.ConvertAll(Console.ReadLine().Split(' '), ATemp => Convert.ToInt32(ATemp));
+	//
+	// 	int result = SurfaceArea(a);
+	// 	textWriter.WriteLine(result);
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
