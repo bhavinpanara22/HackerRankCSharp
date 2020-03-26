@@ -14,6 +14,28 @@ using System;
 
 class AbsolutePermutation
 {
+	static int[] AbsolutePermutationMethod(int n, int k)
+	{
+		int[] per        = new int[n];
+		int   multiplier = 1;
+		for (int i = 0, j = 0; i < n; i++, j++)
+		{
+			if (j == k)
+			{
+				multiplier *= -1;
+				j          =  0;
+			}
+
+			int value = i + 1 + (k * multiplier);
+			if (value < 1 || value > n)
+				return new[] {-1};
+
+			per[i] = value;
+		}
+
+		return per;
+	}
+
 	static void Main(string[] args)
 	{
 		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
@@ -25,25 +47,8 @@ class AbsolutePermutation
 			int      n  = Convert.ToInt32(nk[0]);
 			int      k  = Convert.ToInt32(nk[1]);
 
-			if (k != 0)
-			{
-				if (n % k == 0 && (n / k) % 2 == 0)
-				{
-					for (int i = 1; i <= n; i++)
-						textWriter.Write(i + ((i - 1) / k % 2 != 0 ? -k : k) + " ");
-				}
-				else
-				{
-					textWriter.Write("-1");
-				}
-			}
-			else
-			{
-				for (int i = 1; i <= n; i++)
-					textWriter.Write(i + " ");
-			}
-
-			textWriter.WriteLine();
+			int[] result = AbsolutePermutationMethod(n, k);
+			textWriter.WriteLine(string.Join(" ", result));
 		}
 
 		textWriter.Flush();
