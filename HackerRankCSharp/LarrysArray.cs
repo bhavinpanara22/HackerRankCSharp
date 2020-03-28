@@ -40,23 +40,23 @@ class LarrysArray
 		return a[n - 3] < a[n - 2] && a[n - 2] < a[n - 1] ? "YES" : "NO";
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		int t = Convert.ToInt32(Console.ReadLine());
-
-		for (int tItr = 0; tItr < t; tItr++)
-		{
-			int n = Convert.ToInt32(Console.ReadLine());
-
-			int[]  A      = Array.ConvertAll(Console.ReadLine().Split(' '), ATemp => Convert.ToInt32(ATemp));
-			string result = LarrysArrayMethod(A);
-
-			textWriter.WriteLine(result);
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	int t = Convert.ToInt32(Console.ReadLine());
+	//
+	// 	for (int tItr = 0; tItr < t; tItr++)
+	// 	{
+	// 		int n = Convert.ToInt32(Console.ReadLine());
+	//
+	// 		int[]  A      = Array.ConvertAll(Console.ReadLine().Split(' '), ATemp => Convert.ToInt32(ATemp));
+	// 		string result = LarrysArrayMethod(A);
+	//
+	// 		textWriter.WriteLine(result);
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
