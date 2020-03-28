@@ -15,83 +15,123 @@ using System;
 class TheBomberManGame
 {
 	// Complete the bomberMan function below.
-	static char[][] BomberMan(int n, char[][] grid)
+	static string[] BomberMan(int n, string[] grid)
 	{
-		if (n == 1)
-			return grid;
+		// patterns are repeating every 4 seconds
+		// this repetition starts only after 3rd second has passed.
+		// 1,2,3,4,5,6....
+		// 1 is same as input
+		// all even has all bombs 'O'
+		// 3 & 5 are different
+		// 7,11,15,19....... are same as 3
+		// 9,13,17,21....... are same as 5
 
-		int row = grid.Length, col = grid[0].Length;
+		if (n == 1)
+		{
+			ReplaceNumberWithChar(grid);
+			return grid;
+		}
+
 		if (n % 2 == 0)
 		{
-			for (int i = 0; i < row; i++)
+			for (int i = 0; i < grid.Length; i++)
 			{
-				for (int j = 0; j < col; j++)
-					grid[i][j] = 'O';
+				char[] temp = new char[grid[i].Length];
+				for (int j = 0; j < grid[i].Length; j++)
+					temp[j] = 'O';
+
+				grid[i] = new string(temp);
 			}
+
+			return grid;
 		}
-		else
+		
+		n -= 2;
+		n %= 4;
+		for (int time = 1; time <= n + 2; time++)
 		{
-			n /= 2;
-
-			int num = Math.Min(n, ((n + 1) % 2) + 1);
-			for (int itr = 1; itr <= num; itr++)
+			for (int i = 0; i < grid.Length; i++)
 			{
-				char[][] newGrid = new char[grid.Length][];
-				for (int i = 0; i < row; i++)
+				for (int j = 0; j < grid[i].Length; j++)
 				{
-					char[] temp = new char[grid[i].Length];
-					for (int j = 0; j < col; j++)
-						temp[j] = 'O';
-					newGrid[i] = temp;
-				}
-
-				for (int i = 0; i < row; i++)
-				{
-					for (int j = 0; j < col; j++)
+					// saving now. because we want to change it.
+					bool canExplode = grid[i][j] == '1';
+					if (grid[i][j] != '0')
 					{
-						if (grid[i][j] != 'O')
-							continue;
+						int temp = int.Parse(grid[i][j].ToString()) - 1;
+						grid[i] = ReplaceCharAtPosition(grid[i], j, temp.ToString());
+					}
+					else if (time % 2 == 0)
+					{
+						grid[i] = ReplaceCharAtPosition(grid[i], j, "3");
+					}
 
-						SetGrid(newGrid, i, j, '.');
-						SetGrid(newGrid, i + 1, j, '.');
-						SetGrid(newGrid, i - 1, j, '.');
-						SetGrid(newGrid, i, j + 1, '.');
-						SetGrid(newGrid, i, j - 1, '.');
+					if (canExplode)
+					{
+						// me
+						grid[i] = ReplaceCharAtPosition(grid[i], j, "0");
+
+						// top
+						if (i - 1 >= 0)
+							grid[i - 1] = ReplaceCharAtPosition(grid[i - 1], j, "0");
+
+						// bottom
+						if (i + 1 < grid.Length && grid[i + 1][j] != '1')
+							grid[i + 1] = ReplaceCharAtPosition(grid[i + 1], j, "0");
+
+						// right
+						if (j + 1 < grid[i].Length && grid[i][j + 1] != '1')
+							grid[i] = ReplaceCharAtPosition(grid[i], j + 1, "0");
+
+						// left
+						if (j - 1 >= 0)
+							grid[i] = ReplaceCharAtPosition(grid[i], j - 1, "0");
 					}
 				}
-
-				grid = newGrid;
 			}
 		}
 
+		ReplaceNumberWithChar(grid);
 		return grid;
 	}
 
-	static void SetGrid(char[][] newGrid, int i, int j, char ch)
+	static string ReplaceCharAtPosition(string str, int pos, string toInsert)
 	{
-		if (i >= 0 && i < newGrid.Length && j >= 0 && j < newGrid[0].Length)
-			newGrid[i][j] = ch;
+		str = str.Remove(pos, 1);
+		str = str.Insert(pos, toInsert);
+		return str;
 	}
 
-	// static void Main(string[] args)
-	// {
-	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-	//
-	// 	string[] rcn = Console.ReadLine().Split(' ');
-	//
-	// 	int r = Convert.ToInt32(rcn[0]);
-	// 	int c = Convert.ToInt32(rcn[1]);
-	// 	int n = Convert.ToInt32(rcn[2]);
-	//
-	// 	char[][] grid = new char[r][];
-	// 	for (int i = 0; i < r; i++)
-	// 		grid[i] = Console.ReadLine().Replace(".", "0").Replace("O", "3").ToCharArray();
-	//
-	// 	char[][] result = BomberMan(n, grid);
-	// 	foreach (var temp in result)
-	// 		Console.WriteLine(new string(temp));
-	//
-	// 	textWriter.Flush();
-	// 	textWriter.Close();
-	// }
+	static void ReplaceNumberWithChar(string[] grid)
+	{
+		for (int i = 0; i < grid.Length; i++)
+		{
+			grid[i] = grid[i].Replace("0", ".");
+			grid[i] = grid[i].Replace("1", "O");
+			grid[i] = grid[i].Replace("2", "O");
+			grid[i] = grid[i].Replace("3", "O");
+		}
+	}
+
+	static void Main(string[] args)
+	{
+		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+
+		string[] rcn  = Console.ReadLine().Split(' ');
+		int      r    = Convert.ToInt32(rcn[0]);
+		int      c    = Convert.ToInt32(rcn[1]);
+		int      n    = Convert.ToInt32(rcn[2]);
+		string[] grid = new string [r];
+
+		for (int i = 0; i < r; i++)
+		{
+			string gridItem = Console.ReadLine().Replace(".", "0").Replace("O", "3");
+			grid[i] = gridItem;
+		}
+
+		string[] result = BomberMan(n, grid);
+		textWriter.WriteLine(string.Join("\n", result));
+		textWriter.Flush();
+		textWriter.Close();
+	}
 }
