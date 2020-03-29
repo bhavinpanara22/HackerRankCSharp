@@ -113,25 +113,25 @@ class TheBomberManGame
 		}
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string[] rcn  = Console.ReadLine().Split(' ');
-		int      r    = Convert.ToInt32(rcn[0]);
-		int      c    = Convert.ToInt32(rcn[1]);
-		int      n    = Convert.ToInt32(rcn[2]);
-		string[] grid = new string [r];
-
-		for (int i = 0; i < r; i++)
-		{
-			string gridItem = Console.ReadLine().Replace(".", "0").Replace("O", "3");
-			grid[i] = gridItem;
-		}
-
-		string[] result = BomberMan(n, grid);
-		textWriter.WriteLine(string.Join("\n", result));
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string[] rcn  = Console.ReadLine().Split(' ');
+	// 	int      r    = Convert.ToInt32(rcn[0]);
+	// 	int      c    = Convert.ToInt32(rcn[1]);
+	// 	int      n    = Convert.ToInt32(rcn[2]);
+	// 	string[] grid = new string [r];
+	//
+	// 	for (int i = 0; i < r; i++)
+	// 	{
+	// 		string gridItem = Console.ReadLine().Replace(".", "0").Replace("O", "3");
+	// 		grid[i] = gridItem;
+	// 	}
+	//
+	// 	string[] result = BomberMan(n, grid);
+	// 	textWriter.WriteLine(string.Join("\n", result));
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
