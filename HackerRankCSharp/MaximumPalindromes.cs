@@ -69,27 +69,27 @@ class ResultMaximumPalindromes
 
 class MaximumPalindromes
 {
-	public static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string s = Console.ReadLine();
-		ResultMaximumPalindromes.Initialize(s);
-
-		int q = Convert.ToInt32(Console.ReadLine().Trim());
-
-		for (int qItr = 0; qItr < q; qItr++)
-		{
-			string[] firstMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
-
-			int l = Convert.ToInt32(firstMultipleInput[0]);
-			int r = Convert.ToInt32(firstMultipleInput[1]);
-
-			int result = ResultMaximumPalindromes.AnswerQuery(l, r);
-			textWriter.WriteLine(result);
-		}
-
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// public static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string s = Console.ReadLine();
+	// 	ResultMaximumPalindromes.Initialize(s);
+	//
+	// 	int q = Convert.ToInt32(Console.ReadLine().Trim());
+	//
+	// 	for (int qItr = 0; qItr < q; qItr++)
+	// 	{
+	// 		string[] firstMultipleInput = Console.ReadLine().TrimEnd().Split(' ');
+	//
+	// 		int l = Convert.ToInt32(firstMultipleInput[0]);
+	// 		int r = Convert.ToInt32(firstMultipleInput[1]);
+	//
+	// 		int result = ResultMaximumPalindromes.AnswerQuery(l, r);
+	// 		textWriter.WriteLine(result);
+	// 	}
+	//
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
