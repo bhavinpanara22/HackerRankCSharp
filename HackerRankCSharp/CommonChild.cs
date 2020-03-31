@@ -35,16 +35,16 @@ class CommonChild
 		return check[s1.Length, s2.Length];
 	}
 
-	static void Main(string[] args)
-	{
-		TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-		string s1 = Console.ReadLine();
-		string s2 = Console.ReadLine();
-
-		int result = CommonChildMethod(s1, s2);
-		textWriter.WriteLine(result);
-		textWriter.Flush();
-		textWriter.Close();
-	}
+	// static void Main(string[] args)
+	// {
+	// 	TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+	//
+	// 	string s1 = Console.ReadLine();
+	// 	string s2 = Console.ReadLine();
+	//
+	// 	int result = CommonChildMethod(s1, s2);
+	// 	textWriter.WriteLine(result);
+	// 	textWriter.Flush();
+	// 	textWriter.Close();
+	// }
 }
